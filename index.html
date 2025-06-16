@@ -4,45 +4,62 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Alex Chen - Full Stack Developer specializing in Web3 and Cloud Engineering. Building the future with blockchain technology and scalable cloud solutions." />
-    <meta name="keywords" content="Web3, Cloud Engineering, Blockchain, React, AWS, Smart Contracts, DeFi, Full Stack Developer" />
-    <meta name="author" content="Alex Chen" />
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Alex Chen - Web3 & Cloud Engineer" />
-    <meta property="og:description" content="Innovative developer building the future with Web3 and Cloud technologies" />
+    <!-- Primary Meta Tags -->
+    <title>Tushar Bhardwaj | Full Stack & AI Developer</title>
+    <meta name="title" content="Tushar Bhardwaj | Full Stack & AI Developer" />
+    <meta name="description" content="Tushar Bhardwaj - Portfolio of a Full Stack Developer and AI Enthusiast. Building modern web experiences with React, Node.js, and AI integration." />
+    <meta name="keywords" content="Tushar Bhardwaj, Portfolio, Full Stack Developer, AI Developer, React, Node.js, Tailwind, Vite, Web Development, OpenAI, JavaScript" />
+    <meta name="author" content="Tushar Bhardwaj" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <title>TUSHAR BHARDWAJ | Portfolio</title>
-    
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:title" content="Tushar Bhardwaj | Full Stack & AI Developer" />
+    <meta property="og:description" content="Explore the professional portfolio of Tushar Bhardwaj, a modern web and AI developer." />
+    <meta property="og:image" content="/cover.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourdomain.com/" />
+    <meta property="twitter:title" content="Tushar Bhardwaj | Full Stack & AI Developer" />
+    <meta property="twitter:description" content="Explore the professional portfolio of Tushar Bhardwaj, a modern web and AI developer." />
+    <meta property="twitter:image" content="/cover.png" />
+
+    <!-- Preload Fonts for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Critical CSS to Prevent FOUC -->
     <style>
-      /* Critical CSS for preventing FOUC */
-      html { 
-        visibility: hidden; 
+      html {
+        visibility: hidden;
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: #000;
+        scroll-behavior: smooth;
       }
-      body { 
-        margin: 0; 
-        padding: 0; 
-        background: #000; 
+
+      body {
+        margin: 0;
+        padding: 0;
         color: #fff;
+        background: #000;
         overflow-x: hidden;
       }
+
       #root {
         min-height: 100vh;
       }
     </style>
   </head>
+
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.tsx"></script>
     <script>
-      // Show page once loaded
+      // Avoid Flash of Unstyled Content (FOUC)
       window.addEventListener('load', () => {
         document.documentElement.style.visibility = 'visible';
         document.documentElement.classList.add('loaded');
