@@ -8,17 +8,15 @@ const About: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   const textLines = [
-    "I'm a passionate technologist who thrives at the intersection of Web3 and Cloud Engineering.",
-    "My journey began with traditional web development, but I quickly found myself drawn to the revolutionary potential of blockchain technology.",
-    "When I'm not architecting decentralized applications or optimizing cloud deployments, you'll find me exploring smart contracts and AWS services.",
-    "I believe technology should be accessible, scalable, and transformative. Every line of code I write is guided by these principles."
+    "I'm a 25-year-old tech enthusiast deeply passionate about Web Development, Artificial Intelligence, Cloud Computing, and Blockchain.",
+    "With 2 years of hands-on coding experience and a sharp eye as a bug hunter, I've built over 25 projects that reflect my drive and dedication.",
+    "I'm always curious to learn and explore new frontiers in technology, be it smart contracts, scalable cloud systems, or AI-driven tools.",
+    "My journey is driven by a mission: to build innovative tools that help others, contribute meaningfully to open-source projects, and make a real impact through AI and emerging technologies."
   ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
+      ([entry]) => entry.isIntersecting && setIsVisible(true),
       { threshold: 0.3 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -27,22 +25,21 @@ const About: React.FC = () => {
 
   useEffect(() => {
     if (!isVisible) return;
+
     let lineIndex = 0;
     let charIndex = 0;
-    let currentLine = '';
 
     const type = () => {
       if (lineIndex < textLines.length) {
-        if (charIndex < textLines[lineIndex].length) {
-          currentLine += textLines[lineIndex][charIndex];
-          setDisplayedText(prev => prev + textLines[lineIndex][charIndex]);
+        const currentLine = textLines[lineIndex];
+        if (charIndex < currentLine.length) {
+          setDisplayedText(prev => prev + currentLine[charIndex]);
           charIndex++;
-          setTimeout(type, 25);
+          setTimeout(type, 20);
         } else {
           setDisplayedText(prev => prev + ' ');
           lineIndex++;
           charIndex = 0;
-          currentLine = '';
           setTimeout(type, 400);
         }
       }
@@ -57,7 +54,6 @@ const About: React.FC = () => {
       id="about"
       className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-800 relative overflow-hidden"
     >
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
@@ -67,7 +63,6 @@ const About: React.FC = () => {
         ></div>
       </div>
 
-      {/* Floating Particles */}
       <div className="absolute inset-0">
         {[...Array(15)].map((_, i) => (
           <div
@@ -89,9 +84,9 @@ const About: React.FC = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6 animate-pulse-glow">
               <User className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">Who I Am</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">About Me</h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-              Passionate about building the future of technology
+              Developer | Cloud Enthusiast | AI Explorer | Bug Hunter
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-green-400 mx-auto"></div>
           </div>
@@ -116,17 +111,12 @@ const About: React.FC = () => {
                   <div className="absolute top-4 right-4">
                     <FileText className="w-8 h-8 text-cyan-400 animate-float" />
                   </div>
-                  <div className="absolute bottom-4 right-4">
-                    <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
-                  </div>
                 </div>
                 <div className="flex items-center justify-center relative">
                   <div className="relative group">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center animate-bounce shadow-lg">
                       <PenTool className="w-8 h-8 text-white" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping"></div>
-                    <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-green-400 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
                   </div>
                 </div>
               </div>
@@ -152,7 +142,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-3 gap-4">
-                {[{ value: '5+', label: 'Years Learning', icon: Target }, { value: '50+', label: 'Projects Built', icon: FileText }, { value: '24/7', label: 'Always Growing', icon: Lightbulb }].map((stat, i) => (
+                {[{ value: '2+', label: 'Years Coding', icon: Target }, { value: '25+', label: 'Projects Built', icon: FileText }, { value: 'Always', label: 'Learning & Growing', icon: Lightbulb }].map((stat, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, y: 30 }}
@@ -173,7 +163,8 @@ const About: React.FC = () => {
                   My Mission
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  To bridge the gap between traditional web development and the decentralized future, creating solutions that are not just innovative, but accessible and impactful.
+                  To build innovative tools that help others, contribute meaningfully to open-source projects,
+                  and make a real impact through AI and emerging technologies.
                 </p>
               </div>
             </motion.div>
