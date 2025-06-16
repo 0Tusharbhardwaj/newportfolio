@@ -8,7 +8,7 @@ const About: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   const textLines = [
-    "I'm a 25-year-old tech enthusiast deeply passionate about Web Development, Artificial Intelligence, Cloud Computing, and Blockchain.",
+    "I'm a 18-year-old tech enthusiast deeply passionate about Web Development, Artificial Intelligence, Cloud Computing, and Blockchain.",
     "With 2 years of hands-on coding experience and a sharp eye as a bug hunter, I've built over 25 projects that reflect my drive and dedication.",
     "I'm always curious to learn and explore new frontiers in technology, be it smart contracts, scalable cloud systems, or AI-driven tools.",
     "My journey is driven by a mission: to build innovative tools that help others, contribute meaningfully to open-source projects, and make a real impact through AI and emerging technologies."
