@@ -92,8 +92,8 @@ const Contact: React.FC = () => {
             {/* Contact Details */}
             <div className="space-y-6">
               {[
-                { icon: Mail, label: 'Email', value: 'youremail@example.com' },
-                { icon: Phone, label: 'Phone', value: '+91 9876543210' },
+                { icon: Mail, label: 'Email', value: 'redburg035@gmail.com' },
+                { icon: Phone, label: 'Phone', value: '+91 6395219997' },
                 { icon: MapPin, label: 'Location', value: 'India' }
               ].map((contact, index) => {
                 const Icon = contact.icon;
