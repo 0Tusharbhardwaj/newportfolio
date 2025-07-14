@@ -59,33 +59,33 @@ const Projects: React.FC = () => {
       stars: 135,
       views: '6k+'
     },
-    {
-      title: 'Vinky Space',
-      description: 'A colorful and fun personal website for my little brother with gallery, achievements, and multiplayer games.',
-      image: 'https://raw.githubusercontent.com/0Tusharbhardwaj/vinky-space/main/public/photos/photo_2025-07-12_10-45-01.jpg',
-      tech: ['React', 'Tailwind CSS', 'Lucide', 'Vite'],
-      color: 'from-pink-500 to-yellow-400',
-      icon: Gamepad2,
-      github: 'https://github.com/0Tusharbhardwaj/vinky-space',
-      live: 'https://vinky-space-eight.vercel.app/',
-      status: 'Live',
-      stars: 88,
-      views: '1.9k'
-    },
-    {
-      title: 'Passo – Password Manager',
-      description: 'A secure, modern password manager supporting both local and Supabase cloud storage with auth and encryption.',
-      image: 'https://www.dreamstime.com/illustration/password-banner.html',
-      tech: ['React', 'Tailwind CSS', 'Supabase', 'Vite', 'CryptoJS'],
-      color: 'from-slate-600 to-slate-900',
-      icon: Lock,
-      github: 'https://github.com/0Tusharbhardwaj/passo',
-      live: 'https://passo-two.vercel.app/',
-      status: 'Live',
-      stars: 72,
-      views: '2.2k'
-    }
-  ];
+   {
+  title: 'Passo – Password Manager',
+  description: 'A secure and modern password manager with local and cloud storage options using Supabase. Includes auth, sync, and intuitive UI.',
+  image: 'https://thumbs.dreamstime.com/b/password-banner-concept-data-protection-online-privacy-internet-security-virtual-screen-padlock-blurred-background-password-banner-216760217.jpg',
+  tech: ['React', 'Vite', 'Tailwind CSS', 'Supabase', 'CryptoJS'],
+  color: 'from-indigo-500 to-fuchsia-500',
+  icon: Lock, // use `Lock` from Lucide
+  github: 'https://github.com/0Tusharbhardwaj/passo',
+  live: 'https://passo-two.vercel.app/',
+  status: 'Live',
+  stars: 51,
+  views: '1.1k'
+},
+{
+  title: 'Vinky Space – Joyful Website',
+  description: 'A colorful, fun personal website for my younger brother with games, gallery, and achievements — built purely to make him smile.',
+  image: 'https://cdn.vectorstock.com/i/1000x1000/87/11/banner-template-design-with-happy-kids-vector-45768711.jpg',
+  tech: ['React', 'Vite', 'Tailwind CSS', 'Lucide Icons'],
+  color: 'from-pink-400 to-yellow-400',
+  icon: Gamepad, // use `Gamepad` or `GameController` from Lucide
+  github: 'https://github.com/0Tusharbhardwaj/vinky-space',
+  live: 'https://vinky-space-eight.vercel.app/',
+  status: 'Live',
+  stars: 72,
+  views: '2.7k'
+};
+
 
   return (
     <section ref={sectionRef} id="projects" className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-800 relative overflow-hidden">
