@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ExternalLink, Github, Zap, Cloud, Smartphone, Globe, Star, Eye } from 'lucide-react';
+import { ExternalLink, Github, Zap, Cloud, Smartphone, Globe, Star, Eye, Gamepad2 } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -22,56 +22,43 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
-      title: 'DeFi Portfolio Tracker',
-      description: 'Real-time portfolio tracking for DeFi investments with advanced analytics, yield farming opportunities, and cross-chain compatibility.',
-      image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'Web3.js', 'Ethereum', 'Chart.js', 'TypeScript'],
-      color: 'from-blue-500 to-cyan-500',
-      icon: Zap,
-      github: '#',
-      live: '#',
-      status: 'Live',
-      stars: 124,
-      views: '2.3k'
+      title: 'SafeSpace.AI',
+      description: 'A full-stack mental health companion with journaling, mood tracking, analytics, and AI chat powered by OpenAI and Supabase Edge Functions.',
+      image: 'https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=800',
+      tech: ['React', 'TypeScript', 'Supabase', 'OpenAI', 'Tailwind CSS'],
+      color: 'from-pink-500 to-red-500',
+      icon: Eye,
+      github: 'https://github.com/0Tusharbhardwaj/SAFESPACE.AI',
+      live: 'https://safespace-ai.vercel.app/',
+      status: 'Development',
+      stars: 73,
+      views: '1.9k'
     },
     {
-      title: 'CloudSync Dashboard',
-      description: 'Multi-cloud infrastructure management platform with automated scaling, cost optimization, and real-time monitoring across AWS, Azure, and GCP.',
-      image: 'https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['Next.js', 'AWS', 'Docker', 'Terraform', 'Python'],
-      color: 'from-purple-500 to-pink-500',
-      icon: Cloud,
-      github: '#',
-      live: '#',
-      status: 'Beta',
-      stars: 89,
-      views: '1.8k'
-    },
-    {
-      title: 'NFT Marketplace Pro',
-      description: 'Full-featured NFT marketplace with lazy minting, royalties, advanced search capabilities, and integrated wallet support.',
-      image: 'https://images.pexels.com/photos/6444304/pexels-photo-6444304.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['React', 'Solidity', 'IPFS', 'MetaMask', 'Hardhat'],
-      color: 'from-green-500 to-emerald-500',
+      title: 'UPTAC College Predictor Suite',
+      description: 'Two powerful tools for predicting eligible colleges under UPTAC 2024 for B.Tech and other UG courses using real closing rank data.',
+      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+      tech: ['React', 'TypeScript', 'Tailwind CSS', 'CSV Export', 'JSON'],
+      color: 'from-cyan-500 to-purple-500',
       icon: Globe,
-      github: '#',
-      live: '#',
+      github: 'https://github.com/0Tusharbhardwaj/uptac-college-predictor',
+      live: 'https://uptac-college-predictor.vercel.app/',
       status: 'Live',
       stars: 156,
-      views: '3.1k'
+      views: '6.2k'
     },
     {
-      title: 'Smart Contract Auditor',
-      description: 'Automated smart contract vulnerability scanner with AI-powered security recommendations and comprehensive reporting.',
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tech: ['Python', 'AI/ML', 'Solidity', 'Node.js', 'Docker'],
-      color: 'from-yellow-500 to-orange-500',
-      icon: Smartphone,
-      github: '#',
-      live: '#',
-      status: 'Development',
-      stars: 67,
-      views: '1.2k'
+      title: 'Vinky Space',
+      description: 'A joyful, colorful personal website built for my 7-year-old brother featuring his gallery, milestones, fun facts, multiplayer games, and a password manager.',
+      image: 'https://images.pexels.com/photos/2081061/pexels-photo-2081061.jpeg?auto=compress&cs=tinysrgb&w=800',
+      tech: ['React', 'Tailwind CSS', 'LocalStorage', 'Vite', 'Lucide Icons'],
+      color: 'from-yellow-400 to-pink-400',
+      icon: Gamepad2,
+      github: 'https://github.com/0Tusharbhardwaj/vinky-space',
+      live: 'https://vinky-space-eight.vercel.app/',
+      status: 'Live',
+      stars: 34,
+      views: '720'
     }
   ];
 
@@ -81,15 +68,13 @@ const Projects: React.FC = () => {
       id="projects"
       className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-800 relative overflow-hidden"
     >
-      {/* Enhanced Geometric Background */}
+      {/* Background grid and floating particles */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 10L100 35L100 85L60 110L20 85L20 35Z' fill='none' stroke='%2306b6d4' stroke-width='1' opacity='0.3'/%3E%3Cpath d='M60 30L80 42.5L80 77.5L60 90L40 77.5L40 42.5Z' fill='none' stroke='%238b5cf6' stroke-width='1' opacity='0.2'/%3E%3C/svg%3E")`,
           backgroundSize: '120px 120px'
         }}></div>
       </div>
-
-      {/* Floating Particles */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
@@ -107,7 +92,6 @@ const Projects: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Enhanced Section Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6 animate-pulse-glow">
               <Globe className="w-8 h-8 text-white" />
@@ -134,7 +118,6 @@ const Projects: React.FC = () => {
                   onMouseEnter={() => setHoveredProject(index)}
                   onMouseLeave={() => setHoveredProject(null)}
                 >
-                  {/* Project Image */}
                   <div className="relative h-72 overflow-hidden">
                     <img
                       src={project.image}
@@ -142,8 +125,6 @@ const Projects: React.FC = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
-                    
-                    {/* Status Badge */}
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                         project.status === 'Live' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
@@ -153,15 +134,11 @@ const Projects: React.FC = () => {
                         {project.status}
                       </span>
                     </div>
-                    
-                    {/* Floating Icon */}
                     <div className="absolute top-4 right-4">
                       <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${project.color} p-2.5 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
                         <IconComponent className="w-full h-full text-white" />
                       </div>
                     </div>
-
-                    {/* Stats Overlay */}
                     <div className="absolute bottom-4 left-4 flex space-x-4">
                       <div className="flex items-center space-x-1 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
                         <Star className="w-3 h-3 text-yellow-400" />
@@ -172,22 +149,16 @@ const Projects: React.FC = () => {
                         <span className="text-xs text-white">{project.views}</span>
                       </div>
                     </div>
-
-                    {/* Hover Overlay */}
                     <div className={`absolute inset-0 bg-gradient-to-r ${project.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
                   </div>
 
-                  {/* Project Content */}
                   <div className="p-8">
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                       {project.title}
                     </h3>
-                    
                     <p className="text-gray-400 mb-6 leading-relaxed">
                       {project.description}
                     </p>
-
-                    {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 mb-8">
                       {project.tech.map((tech, techIndex) => (
                         <span
@@ -198,8 +169,6 @@ const Projects: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
-                    {/* Action Buttons */}
                     <div className="flex space-x-4">
                       <a
                         href={project.github}
@@ -218,10 +187,8 @@ const Projects: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Animated Border */}
                   <div className={`absolute -inset-0.5 bg-gradient-to-r ${project.color} rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10 blur`}></div>
 
-                  {/* Hover Effects */}
                   {hoveredProject === index && (
                     <div className="absolute top-6 left-6">
                       <div className="flex space-x-1">
@@ -240,7 +207,6 @@ const Projects: React.FC = () => {
             })}
           </div>
 
-          {/* Enhanced Coming Soon & View More Projects Section */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 max-w-2xl mx-auto mb-8">
               <div className="flex items-center justify-center mb-4">
