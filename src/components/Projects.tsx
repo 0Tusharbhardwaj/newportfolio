@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
     {
       title: 'Passo – Password Manager',
       description: 'A secure, modern password manager supporting both local and Supabase cloud storage with auth and encryption.',
-      image: 'https://images.pexels.com/photos/5380645/pexels-photo-5380645.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://www.dreamstime.com/illustration/password-banner.html',
       tech: ['React', 'Tailwind CSS', 'Supabase', 'Vite', 'CryptoJS'],
       color: 'from-slate-600 to-slate-900',
       icon: Lock,
